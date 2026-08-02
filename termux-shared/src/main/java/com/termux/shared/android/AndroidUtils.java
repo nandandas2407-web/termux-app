@@ -179,8 +179,9 @@ public class AndroidUtils {
         // multiline values will be ignored
         Pattern propertiesPattern = Pattern.compile("^\\[([^]]+)]: \\[(.+)]$");
 
+        Process process = null;
         try {
-            Process process = new ProcessBuilder()
+            process = new ProcessBuilder()
                 .command("/system/bin/getprop")
                 .redirectErrorStream(true)
                 .start();
@@ -198,12 +199,13 @@ public class AndroidUtils {
                         systemProperties.put(key, value);
                 }
             }
-
             bufferedReader.close();
-            process.destroy();
-
         } catch (IOException e) {
             Logger.logStackTraceWithMessage("Failed to get run \"/system/bin/getprop\" to get system properties.", e);
+        } finally {
+            if (process != null) {
+                process.destroy();
+            }
         }
 
         //for (String key : systemProperties.stringPropertyNames()) {

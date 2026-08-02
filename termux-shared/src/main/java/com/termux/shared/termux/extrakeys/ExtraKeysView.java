@@ -94,7 +94,7 @@ public final class ExtraKeysView extends GridLayout {
 
         /**
          * This is called by {@link ExtraKeysView} when a button is clicked so that the client
-         * can perform any hepatic feedback. This is only called in the {@link MaterialButton.OnClickListener}
+         * can perform any haptic feedback. This is only called in the {@link MaterialButton.OnClickListener}
          * and not for every repeat. Its also called for {@link #mSpecialButtons}.
          *
          * @param view The view that was clicked.

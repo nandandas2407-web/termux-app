@@ -50,7 +50,7 @@ import static com.termux.shared.termux.TermuxConstants.TERMUX_STAGING_PREFIX_DIR
  * <p/>
  * (4) The zip file is loaded from a shared library.
  * <p/>
- * (5) The zip, containing entries relative to the $PREFIX, is is downloaded and extracted by a zip input stream
+ * (5) The zip, containing entries relative to the $PREFIX, is downloaded and extracted by a zip input stream
  * continuously encountering zip file entries:
  * <p/>
  * (5.1) If the zip entry encountered is SYMLINKS.txt, go through it and remember all symlinks to setup.
