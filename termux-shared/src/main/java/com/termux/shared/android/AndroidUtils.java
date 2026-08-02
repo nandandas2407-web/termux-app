@@ -123,7 +123,7 @@ public class AndroidUtils {
         markdownString.append("\n\n### Software\n");
         appendPropertyToMarkdown(markdownString,"OS_VERSION", getSystemPropertyWithAndroidAPI("os.version"));
         appendPropertyToMarkdown(markdownString, "SDK_INT", Build.VERSION.SDK_INT);
-        // If its a release version
+        // If it's a release version
         if ("REL".equals(Build.VERSION.CODENAME))
             appendPropertyToMarkdown(markdownString, "RELEASE", Build.VERSION.RELEASE);
         else

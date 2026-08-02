@@ -573,7 +573,7 @@ public class PackageUtils {
              * Todo: We may need AndroidManifest queries entries if package is installed but with a different signature on android 11
              * https://developer.android.com/training/package-visibility
              * Need a device that allows (manual) installation of apk with mismatched signature of
-             * sharedUserId apps to test. Currently, if its done, PackageManager just doesn't load
+             * sharedUserId apps to test. Currently, if it's done, PackageManager just doesn't load
              * the package and removes its apk automatically if its installed as a user app instead of system app
              * W/PackageManager: Failed to parse /path/to/com.termux.tasker.apk: Signature mismatch for shared user: SharedUserSetting{xxxxxxx com.termux/10xxx}
              */
